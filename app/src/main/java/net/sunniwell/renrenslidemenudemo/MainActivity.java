@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         return xUp - xDown > screenWidth / 2 || getVelocity() > VELOCITY_DEFAULT_DISTANCE;
     }
     private boolean shouldToScrollToContent() {
-        return xDown - xUp > screenWidth / 2 || getVelocity() >VELOCITY_DEFAULT_DISTANCE;
+        return xDown - xUp + menuPadding > screenWidth / 2 || getVelocity() >VELOCITY_DEFAULT_DISTANCE;
     }
     private void scrollToMenu() {
         new ScrollTask().execute(30);
